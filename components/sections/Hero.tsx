@@ -20,68 +20,72 @@ export function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden bg-bg-base px-6 pb-24 pt-32 md:pb-32 md:pt-40"
+      className="relative overflow-hidden bg-bg-base px-6 pb-20 pt-28 md:pb-28 md:pt-36"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/4 bg-[radial-gradient(closest-side,rgba(59,110,246,0.16),transparent)]"
+        className="pointer-events-none absolute -left-24 top-0 h-[560px] w-[560px] -translate-y-1/4 bg-[radial-gradient(closest-side,rgba(59,110,246,0.16),transparent)]"
       />
 
-      <motion.div
-        initial={reducedMotion ? undefined : "hidden"}
-        animate={reducedMotion ? undefined : "visible"}
-        variants={staggerContainer(0.1)}
-        className="relative mx-auto flex max-w-wide flex-col items-center text-center"
-      >
-        <motion.span
-          variants={fadeRise}
-          transition={itemTransition}
-          className="mb-6 inline-flex items-center rounded-full border border-border-subtle bg-surface-1 px-3 py-1 text-micro uppercase tracking-wide text-text-secondary"
-        >
-          {heroCopy.eyebrow}
-        </motion.span>
-
-        <motion.h1
-          id="hero-heading"
-          variants={fadeRise}
-          transition={itemTransition}
-          className="max-w-[18ch] text-balance font-display text-display text-text-primary"
-        >
-          {heroCopy.headline}
-        </motion.h1>
-
-        <motion.p
-          variants={fadeRise}
-          transition={itemTransition}
-          className="mt-6 max-w-prose text-pretty text-body text-text-secondary md:text-title"
-        >
-          {heroCopy.subhead}
-        </motion.p>
-
+      <div className="relative mx-auto grid max-w-wide items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <motion.div
-          variants={fadeRise}
-          transition={itemTransition}
-          className="mt-10 flex flex-col items-center gap-3 sm:flex-row"
+          initial={reducedMotion ? undefined : "hidden"}
+          animate={reducedMotion ? undefined : "visible"}
+          variants={staggerContainer(0.1)}
+          className="flex flex-col items-start text-left"
         >
-          <Button href={heroCopy.primaryCta.href} variant="primary" size="lg">
-            {heroCopy.primaryCta.label}
-          </Button>
-          <Button href={heroCopy.secondaryCta.href} variant="ghost" size="lg">
-            {heroCopy.secondaryCta.label}
-          </Button>
+          <motion.span
+            variants={fadeRise}
+            transition={itemTransition}
+            className="mb-6 inline-flex items-center rounded-full border border-border-subtle bg-surface-1 px-3 py-1 text-micro uppercase tracking-wide text-text-secondary"
+          >
+            {heroCopy.eyebrow}
+          </motion.span>
+
+          <motion.h1
+            id="hero-heading"
+            variants={fadeRise}
+            transition={itemTransition}
+            className="max-w-[15ch] text-balance font-display text-display text-text-primary"
+          >
+            {heroCopy.headline}
+          </motion.h1>
+
+          <motion.p
+            variants={fadeRise}
+            transition={itemTransition}
+            className="mt-6 max-w-xl text-pretty text-body text-text-secondary md:text-title"
+          >
+            {heroCopy.subhead}
+          </motion.p>
+
+          <motion.div
+            variants={fadeRise}
+            transition={itemTransition}
+            className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
+          >
+            <Button href={heroCopy.primaryCta.href} variant="primary" size="lg">
+              {heroCopy.primaryCta.label}
+            </Button>
+            <Button href={heroCopy.secondaryCta.href} variant="ghost" size="lg">
+              {heroCopy.secondaryCta.label}
+            </Button>
+          </motion.div>
         </motion.div>
 
         <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 14, filter: "blur(6px)" },
-            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          initial={reducedMotion ? undefined : { opacity: 0, y: 14, filter: "blur(6px)" }}
+          animate={reducedMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{
+            duration: reducedMotion ? 0 : 0.6,
+            delay: reducedMotion ? 0 : 0.24,
+            ease: EASE_ENTER,
           }}
-          transition={{ ...itemTransition, duration: reducedMotion ? 0 : 0.6 }}
-          className="mt-16 w-full max-w-md"
+          className="w-full justify-self-center lg:justify-self-end"
         >
           <div
             className={[
-              "rounded-xl border border-white/[0.06] bg-bg-raised p-6 text-left shadow-glass",
+              "w-full max-w-md rounded-xl border border-white/[0.06] bg-bg-raised p-6 text-left shadow-glass",
               "supports-[backdrop-filter]:bg-[rgba(16,18,22,0.72)]",
               "supports-[backdrop-filter]:backdrop-blur-[20px]",
               "supports-[backdrop-filter]:backdrop-saturate-[120%]",
@@ -102,7 +106,7 @@ export function Hero() {
             </p>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }
