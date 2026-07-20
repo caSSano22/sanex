@@ -19,7 +19,7 @@ export const heroCopy: HeroCopy = {
   headline: "The accountability layer for on-chain finance.",
   subhead:
     "Millions of people were given self-custody and autonomous agents at the same time. SANEX verifies every action, enforces the limits you and your agents are allowed to work within, and keeps a clear record of who was responsible.",
-  primaryCta: { label: "Request access", href: "#cta" },
+  primaryCta: { label: "Request access", href: "/access" },
   secondaryCta: { label: "Read the thesis", href: "/docs" },
   verdict: {
     status: "safe",

@@ -21,9 +21,9 @@ export const footerCopy: FooterCopy = {
     {
       title: "Product",
       links: [
-        { label: "Overview", href: "#hero" },
-        { label: "How it works", href: "#how-it-works" },
-        { label: "Agent controls", href: "#dashboard" },
+        { label: "Overview", href: "/#hero" },
+        { label: "How it works", href: "/#how-it-works" },
+        { label: "Agent controls", href: "/#dashboard" },
         { label: "Access", href: "/access" },
       ],
     },
@@ -32,8 +32,8 @@ export const footerCopy: FooterCopy = {
       links: [
         { label: "Docs", href: "/docs" },
         { label: "Thesis", href: "/docs#thesis" },
-        { label: "Roadmap", href: "#roadmap" },
-        { label: "FAQ", href: "#faq" },
+        { label: "Roadmap", href: "/#roadmap" },
+        { label: "FAQ", href: "/#faq" },
       ],
     },
     {

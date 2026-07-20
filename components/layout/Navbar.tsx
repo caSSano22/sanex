@@ -109,7 +109,7 @@ export function Navbar() {
           <Button href="/docs" variant="ghost" size="sm">
             Docs
           </Button>
-          <Button href="#cta" variant="primary" size="sm">
+          <Button href="/access" variant="primary" size="sm">
             Request access
           </Button>
         </div>
@@ -158,7 +158,7 @@ export function Navbar() {
               <Button href="/docs" variant="secondary" size="md" className="w-full">
                 Docs
               </Button>
-              <Button href="#cta" variant="primary" size="md" className="w-full">
+              <Button href="/access" variant="primary" size="md" className="w-full">
                 Request access
               </Button>
             </div>
