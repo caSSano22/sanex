@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import {
   Hero,
+  Premise,
   SocialProof,
   Features,
   HowItWorks,
@@ -16,6 +17,7 @@ export default function Home() {
     <main id="main-content">
       <Navbar />
       <Hero />
+      <Premise />
       <SocialProof />
       <Features />
       <HowItWorks />

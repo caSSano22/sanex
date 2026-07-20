@@ -1,4 +1,5 @@
 export { Hero } from "./Hero";
+export { Premise } from "./Premise";
 export { SocialProof } from "./SocialProof";
 export { Features } from "./Features";
 export { HowItWorks } from "./HowItWorks";
