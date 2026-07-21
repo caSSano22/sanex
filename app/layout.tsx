@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "SANEX — The accountability layer for on-chain finance",
   description:
     "SANEX verifies every on-chain action, enforces the limits people and agents are allowed to work within, and keeps a clear, portable record of who was responsible.",
+  other: {
+    "virtual-protocol-site-verification": "626a8f5d97871c2eed35248dcf0fdf55",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
